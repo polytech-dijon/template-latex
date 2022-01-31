@@ -4,7 +4,7 @@ Une template pour créé un rapport en LaTeX avec les couleurs et logos de l'ESI
 
 ## Utilisation
 
-Vous pouvez importer ce projet dans [Overleaf](https://www.overleaf.com/) en téléchargeant l'archive du projet.
+Vous pouvez importer ce projet dans [Overleaf](https://www.overleaf.com/) en téléchargeant l'archive du projet [avec ce lien](https://github.com/gauthier-th/template-latex-ESIREM/raw/master/template-latex-ESIREM.zip).
 
 ## Licence
 
