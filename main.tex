@@ -1,0 +1,60 @@
+\documentclass{report-ESIREM}
+% Pour retirer le thème couleur ESIREM,
+%   Commenter la ligne précédente
+%   Décommenter la ligne dessous
+% \documentclass[noESIREMcolors]{report-ESIREM}
+
+\UV{Matière} % Nom de la matière
+\title{Compte Rendu}
+\author{{\sc Nom} Prénom \\ {\sc Nom} Prénom}
+
+% Pour la colorisation du code
+\usepackage{listingsutf8}
+\usepackage{color}
+\lstset{inputencoding=utf8/latin1}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+\renewcommand{\lstlistingname}{Code}
+
+% Caption pour le code
+\usepackage{caption}
+\captionsetup[lstlisting]{ labelfont=bf, singlelinecheck=false, margin=0pt, font={bf,footnotesize} }
+
+\usepackage{hyperref}
+\usepackage{rotating}
+
+\setlength {\marginparwidth }{2cm}
+\begin{document}
+\subfile{src/tex/titlePage}
+\tableofcontents{} %Commenter/supprimer pour enlever la table des matières
+
+% Décommenter les trois lignes ci-dessous pour sauter une page après la table des matières, et mettre celle-ci sur une page sans en-tête, pied de page et numéro (recommandé)
+
+\thispagestyle{empty}
+\setcounter{page}{0}
+
+\newpage
+\subfile{src/tex/introduction.tex}
+\newpage
+\subfile{src/tex/content.tex}
+\newpage
+\subfile{src/tex/conclusion.tex}
+
+\end{document}
