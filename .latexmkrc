@@ -1,2 +1,2 @@
-$latex = 'latex  -shell-escape';
+$latex = 'latex -shell-escape';
 $pdflatex = 'pdflatex -shell-escape';

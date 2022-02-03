@@ -15,12 +15,13 @@ preview: default
 archive:
 	@echo "Preparing archive..."
 	rm -rf build
+	rm -f template-latex-ESIREM.zip
 	mkdir build
 
 	cp report-ESIREM.cls main.tex LICENSE README.md .gitignore .gitattributes .latexmkrc Makefile build/
 	cp -r src Graphismes-ESIREM build/
 
-	cd build && zip -r ../template-latex-ESIREM.zip *
+	cd build && zip -r ../template-latex-ESIREM.zip * .latexmkrc
 
 # Export the pdf and the png to the overveleaf folder
 prepare_deploy: preview archive
