@@ -4,15 +4,15 @@ Une template pour créé un rapport en LaTeX avec les couleurs et logos de l'ESI
 
 ## Utilisation
 
-Vous pouvez importer ce projet dans [Overleaf](https://www.overleaf.com/) en téléchargeant l'archive du projet [avec ce lien](https://github.com/gauthier-th/template-latex-ESIREM/raw/master/template-latex-ESIREM.zip).
+Vous pouvez importer ce projet dans [Overleaf](https://www.overleaf.com/) en téléchargeant l'archive du projet [avec ce lien](https://github.com/bde-esirem/template-latex-ESIREM/raw/master/template-latex-ESIREM.zip).
 
 ## Aperçu
 
-![Première page](https://github.com/gauthier-th/template-latex-ESIREM/raw/master/overview/main-0.png)
+![Première page](https://github.com/bde-esirem/template-latex-ESIREM/raw/master/overview/main-0.png)
 
-![Deuxième page](https://github.com/gauthier-th/template-latex-ESIREM/raw/master/overview/main-1.png)
+![Deuxième page](https://github.com/bde-esirem/template-latex-ESIREM/raw/master/overview/main-1.png)
 
-[Lien vers le PDF généré](https://github.com/gauthier-th/template-latex-ESIREM/raw/master/overview/main.pdf)
+[Lien vers le PDF généré](https://github.com/bde-esirem/template-latex-ESIREM/raw/master/overview/main.pdf)
 
 ## Compilation
 
