@@ -1,6 +1,6 @@
 # Template LaTeX POLYTECH
 
-Une template pour créé un rapport en LaTeX avec les couleurs et logos de l'POLYTECH.
+Une template pour créé un rapport en LaTeX avec les couleurs et logos de POLYTECH.
 
 ## Utilisation
 
