@@ -15,13 +15,13 @@ preview: default
 archive:
 	@echo "Preparing archive..."
 	rm -rf build
-	rm -f template-latex-ESIREM.zip
+	rm -f template-latex-polytech-dijon.zip
 	mkdir build
 
-	cp report-ESIREM.cls main.tex LICENSE README.md .gitignore .gitattributes .latexmkrc Makefile build/
-	cp -r src Graphismes-ESIREM build/
+	cp report-polytech-dijon.cls main.tex LICENSE README.md .gitignore .gitattributes .latexmkrc Makefile build/
+	cp -r src Graphismes-polytech-dijon-Dijon build/
 
-	cd build && zip -r ../template-latex-ESIREM.zip * .latexmkrc
+	cd build && zip -r ../template-latex-polytech-dijon.zip * .latexmkrc
 
 # Export the pdf and the png to the overveleaf folder
 prepare_deploy: preview archive
