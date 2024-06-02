@@ -1,4 +1,4 @@
-\ProvidesClass{report-POLYTECH}
+\ProvidesClass{report-polytech-dijon}
 
 \LoadClass[a4paper,12pt]{article}
 
@@ -32,14 +32,14 @@
 \usepackage[final]{pdfpages} % Pour inclure des .pdf
 \usepackage[linesnumbered,ruled,vlined]{algorithm2e} % for cool loonking algorithm
 \usepackage{ulem} % Pour souligner en couleur
-\usepackage{Graphismes-POLYTECH/couleurs/couleurs_POLYTECH} %Couleurs définies dans la charte graphique de l'POLYTECH
+\usepackage{Graphismes-Polytech-Dijon/couleurs/couleurs_polytech_dijon} %Couleurs définies dans la charte graphique de PolytechDijon Dijon
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TODO EXPLICATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newif\if@noPOLYTECHcolors\@noPOLYTECHcolorsfalse
-\DeclareOption{noPOLYTECHcolors}{
-  \@noPOLYTECHcolorstrue
+\newif\if@noPolytechDijoncolors\@noPolytechDijoncolorsfalse
+\DeclareOption{noPolytechDijoncolors}{
+  \@noPolytechDijoncolorstrue
 }
 \ProcessOptions\relax
 
@@ -56,16 +56,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Redéfinition des niveaux de titre
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\if@noPOLYTECHcolors
-  \definecolor{bleufPOLYTECH}{RGB}{0,0,0}
+\if@noPolytechDijoncolors
+  \definecolor{bleufPolytechDijon}{RGB}{0,0,0}
 \else
-  \renewcommand{\labelitemi}{\color{bleufPOLYTECH}$\bullet$} %Changement des puces itemize de niveau 1
-  \renewcommand{\labelitemii}{\color{grisfPOLYTECH}$\bullet$} %Changement des puces itemize de niveau 2
+  \renewcommand{\labelitemi}{\color{bleufPolytechDijon}$\bullet$} %Changement des puces itemize de niveau 1
+  \renewcommand{\labelitemii}{\color{grisfPolytechDijon}$\bullet$} %Changement des puces itemize de niveau 2
 
   \makeatletter
 
-  \newcommand\sectionuline{% Commande pour souligner les sections en bleufPOLYTECH
-    \bgroup\markoverwith{\textcolor{bleufPOLYTECH}{\rule[-0.5ex]{0.1mm}{0.5mm}}}%
+  \newcommand\sectionuline{% Commande pour souligner les sections en bleufPolytechDijon
+    \bgroup\markoverwith{\textcolor{bleufPolytechDijon}{\rule[-0.5ex]{0.1mm}{0.5mm}}}%
     \ULon%
   }
   \renewcommand\section{\@startsection {section}{1}{\z@}% Redéfinition de la commande section (plus gros, souligné)
@@ -73,28 +73,28 @@
     {2.3ex \@plus .2ex}%
     {\normalfont\LARGE\bfseries\sectionuline}%
   }
-  \renewcommand\subsection{\@startsection {subsection}{2}{1em}% Redéfinition de la commande subsection (plus gros, en gris POLYTECH)
+  \renewcommand\subsection{\@startsection {subsection}{2}{1em}% Redéfinition de la commande subsection (plus gros, en grisfPolytechDijon)
     {-3ex \@plus -0.8ex \@minus -.2ex}%
     {1.8ex \@plus .2ex}%
-    {\normalfont\Large\bfseries\color{grisfPOLYTECH}}%
+    {\normalfont\Large\bfseries\color{grisfPolytechDijon}}%
   }
 
-  \renewcommand\subsubsection{\@startsection {subsubsection}{3}{2em}% Redéfinition de la commande subsubsection (plus gros, en gris POLYTECH)
+  \renewcommand\subsubsection{\@startsection {subsubsection}{3}{2em}% Redéfinition de la commande subsubsection (plus gros, en grisfPolytechDijon)
     {-2.5ex \@plus -0.6ex \@minus -.2ex}%
     {1.8ex \@plus .2ex}%
-    {\normalfont\large\bfseries\color{grisfPOLYTECH}}%
+    {\normalfont\large\bfseries\color{grisfPolytechDijon}}%
   }
 
-  \renewcommand\paragraph{\@startsection {paragraph}{4}{3em}% Redéfinition de la commande paragraph (plus gros en gris clair POLYTECH)
+  \renewcommand\paragraph{\@startsection {paragraph}{4}{3em}% Redéfinition de la commande paragraph (plus gros en griscPolytechDijon)
     {-2ex \@plus -0.4ex \@minus -.2ex}%
     {1.3ex \@plus .2ex}%
-    {\normalfont\large\bfseries\color{griscPOLYTECH}}%
+    {\normalfont\large\bfseries\color{griscPolytechDijon}}%
   }
 
-  \renewcommand\subparagraph{\@startsection {subparagraph}{5}{4em}% Redéfinition de la commande subparagraph (en gris clair POLYTECH)
+  \renewcommand\subparagraph{\@startsection {subparagraph}{5}{4em}% Redéfinition de la commande subparagraph (en griscPolytechDijon)
     {-1.5ex \@plus -0.2ex \@minus -.2ex}%
     {.8ex \@plus .2ex}%
-    {\normalfont\bfseries\color{griscPOLYTECH}}%
+    {\normalfont\bfseries\color{griscPolytechDijon}}%
   }
 
   \makeatother
@@ -106,11 +106,11 @@
 \renewcommand{\headrulewidth}{0.5pt} %Épaisseur de la ligne d'en-tête
 \renewcommand{\footrulewidth}{1.5pt} %Épaisseur de la ligne de pied de page
 \renewcommand{\footrule}{%
-  {\color{bleufPOLYTECH} \hrule width\headwidth height\footrulewidth \vskip+2mm}
+  {\color{bleufPolytechDijon} \hrule width\headwidth height\footrulewidth \vskip+2mm}
 } %Changement de la couleur de la ligne de pied de page
 %Contenu de l'en-tête :
 \lhead{}%\textsc{\leftmark }} %Section actuelle à gauche de l'en-tête
-\chead{\includegraphics[height=1cm]{./Graphismes-POLYTECH/logos/logo-couleur.png}} %Sigle de l'POLYTECH au centre de l'en-tête
+\chead{\includegraphics[height=1cm]{./Graphismes-Polytech-Dijon/logos/logo-couleur.png}} %Sigle de Polytech Dijon au centre de l'en-tête
 \rhead{\theUV} %Code de l'UV à droite de l'en-tête
 %Contenu du pied de page :
 \cfoot{\thepage} %Numéro de page au centre
